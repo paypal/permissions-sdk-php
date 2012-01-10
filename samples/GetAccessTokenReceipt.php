@@ -4,7 +4,7 @@
  GetAccessTokenReceipt.php
  Called by GetAccessToken.php
  ********************************************/
-$path = '..\lib';
+$path = '../lib';
 set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 require_once('services/Permissions/PermissionsService.php');
 session_start();
