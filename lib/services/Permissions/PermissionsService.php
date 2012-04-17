@@ -8,6 +8,7 @@ require_once('PPUtils.php');
  * Auto generated code
  */
 class PermissionsService extends PPBaseService {
+	private static $SERVICE_VERSION='';
 	public function __construct() {
 		parent::__construct('Permissions');
 	}
@@ -63,6 +64,34 @@ class PermissionsService extends PPBaseService {
 	public function CancelPermissions($cancelPermissionsRequest, $apiUsername=null) {
 		$ret = new CancelPermissionsResponse();
 		$resp = $this->call("CancelPermissions", $cancelPermissionsRequest, $apiUsername);
+		$ret->init(PPUtils::nvpToMap($resp));
+		return $ret;
+	}
+
+
+	/**
+	 * Service Call: GetBasicPersonalData
+	 * @param GetBasicPersonalDataRequest $getBasicPersonalDataRequest
+	 * @return GetBasicPersonalDataResponse
+	 * @throws APIException
+	 */
+	public function GetBasicPersonalData($getBasicPersonalDataRequest, $apiUsername=null) {
+		$ret = new GetBasicPersonalDataResponse();
+		$resp = $this->call("GetBasicPersonalData", $getBasicPersonalDataRequest, $apiUsername);
+		$ret->init(PPUtils::nvpToMap($resp));
+		return $ret;
+	}
+
+
+	/**
+	 * Service Call: GetAdvancedPersonalData
+	 * @param GetAdvancedPersonalDataRequest $getAdvancedPersonalDataRequest
+	 * @return GetAdvancedPersonalDataResponse
+	 * @throws APIException
+	 */
+	public function GetAdvancedPersonalData($getAdvancedPersonalDataRequest, $apiUsername=null) {
+		$ret = new GetAdvancedPersonalDataResponse();
+		$resp = $this->call("GetAdvancedPersonalData", $getAdvancedPersonalDataRequest, $apiUsername);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}

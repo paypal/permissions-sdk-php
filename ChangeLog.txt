@@ -1,3 +1,11 @@
+PayPal Permissions PHP SDK - 0.6.88
+----------------------------------------
+
+Release Date - 17-Apr-2012
+
+	- This release contains stubs update for PayPal wsdl version 88.0
+
+
 PayPal Permissions PHP SDK - 0.6.86
 ----------------------------------------
 
