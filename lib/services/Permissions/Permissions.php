@@ -72,15 +72,13 @@ class ErrorData {
 			if($map != null && array_key_exists($mapKeyName, $map)) {
 				$this->subdomain = $map[$mapKeyName];
 			}
-			if( PPUtils::array_match_key($map, $prefix."severity.") ) {
-				$newPrefix = $prefix ."severity.";
-				$this->severity = new ErrorSeverity();
-				$this->severity->init($map, $newPrefix);
+			$mapKeyName =  $prefix . 'severity';
+			if($map != null && array_key_exists($mapKeyName, $map)) {
+				$this->severity = $map[$mapKeyName];
 			}
-			if( PPUtils::array_match_key($map, $prefix."category.") ) {
-				$newPrefix = $prefix ."category.";
-				$this->category = new ErrorCategory();
-				$this->category->init($map, $newPrefix);
+			$mapKeyName =  $prefix . 'category';
+			if($map != null && array_key_exists($mapKeyName, $map)) {
+				$this->category = $map[$mapKeyName];
 			}
 			$mapKeyName =  $prefix . 'message';
 			if($map != null && array_key_exists($mapKeyName, $map)) {
@@ -173,10 +171,9 @@ class ResponseEnvelope {
 			if($map != null && array_key_exists($mapKeyName, $map)) {
 				$this->timestamp = $map[$mapKeyName];
 			}
-			if( PPUtils::array_match_key($map, $prefix."ack.") ) {
-				$newPrefix = $prefix ."ack.";
-				$this->ack = new AckCode();
-				$this->ack->init($map, $newPrefix);
+			$mapKeyName =  $prefix . 'ack';
+			if($map != null && array_key_exists($mapKeyName, $map)) {
+				$this->ack = $map[$mapKeyName];
 			}
 			$mapKeyName =  $prefix . 'correlationId';
 			if($map != null && array_key_exists($mapKeyName, $map)) {
@@ -739,8 +736,7 @@ class PersonalAttributeList {
 		$str = '';
 		$delim = '';
 		for($i=0; $i<count($this->attribute);$i++) {
-			$newPrefix = $prefix . "attribute($i).";
-			$str .= $delim . call_user_func(array($this->attribute[$i], 'toNVPString'), $newPrefix);
+			$str .= $delim .  $prefix ."attribute($i)=" .  urlencode($this->attribute[$i]);
 		 }
 
 		return $str;
@@ -768,10 +764,9 @@ class PersonalData {
 
 	public function init($map = null, $prefix='') {
 		if($map != null) {
-			if( PPUtils::array_match_key($map, $prefix."personalDataKey.") ) {
-				$newPrefix = $prefix ."personalDataKey.";
-				$this->personalDataKey = new PersonalAttribute();
-				$this->personalDataKey->init($map, $newPrefix);
+			$mapKeyName =  $prefix . 'personalDataKey';
+			if($map != null && array_key_exists($mapKeyName, $map)) {
+				$this->personalDataKey = $map[$mapKeyName];
 			}
 			$mapKeyName =  $prefix . 'personalDataValue';
 			if($map != null && array_key_exists($mapKeyName, $map)) {
