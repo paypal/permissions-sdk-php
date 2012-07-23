@@ -1,64 +1,75 @@
 <?php
  /**
- * Stub objects for Permissions 
- * Auto generated code 
- * 
- */
+  * Stub objects for Permissions 
+  * Auto generated code 
+  * 
+  */
 /**
- * ErrorData
+ * No Document Comments
  */
-class ErrorData {
+class ErrorData  {
+
 	/**
-	 * @access public
-	 * @var long
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var integer
+	 */ 
 	public $errorId;
 
 	/**
-	 * @access public
-	 * @var string
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var string
+	 */ 
 	public $domain;
 
 	/**
-	 * @access public
-	 * @var string
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var string
+	 */ 
 	public $subdomain;
 
 	/**
-	 * @access public
-	 * @var ErrorSeverity
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var ErrorSeverity
+	 */ 
 	public $severity;
 
 	/**
-	 * @access public
-	 * @var ErrorCategory
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var ErrorCategory
+	 */ 
 	public $category;
 
 	/**
-	 * @access public
-	 * @var string
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var string
+	 */ 
 	public $message;
 
 	/**
-	 * @access public
-	 * @var string
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var string
+	 */ 
 	public $exceptionId;
 
 	/**
-	 * array
-	 * @access public
-	 * @var ErrorParameter
-	 */
+	 * No Document Comments
+     *@array
+	 *@access public
+	 *@var ErrorParameter
+	 */ 
 	public $parameter;
 
 
-	public function init($map = null, $prefix='') {
+
+
+	public function init($map = null, $prefix = '') {
 		if($map != null) {
 			$mapKeyName =  $prefix . 'errorId';
 			if($map != null && array_key_exists($mapKeyName, $map)) {
@@ -88,38 +99,47 @@ class ErrorData {
 			if($map != null && array_key_exists($mapKeyName, $map)) {
 				$this->exceptionId = $map[$mapKeyName];
 			}
-			$i=0;
+			$i = 0;
 			while(true) {
-				if( PPUtils::array_match_key($map, $prefix."parameter($i)") ) {
-					$newPrefix = $prefix."parameter($i).";
+				if (PPUtils::array_match_key($map, $prefix . "parameter($i)")) {
+					$newPrefix = $prefix . "parameter($i).";
 					$this->parameter[$i] = new ErrorParameter();
 					$this->parameter[$i]->init($map, $newPrefix);
+				} else {
+					break;
 				}
-				else break;
 				$i++;
 			}
+			
 		}
 	}
-}
+} 
+
+
 
 /**
- * ErrorParameter
+ * No Document Comments
  */
-class ErrorParameter {
+class ErrorParameter  {
+
 	/**
-	 * @access public
-	 * @var string
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var string
+	 */ 
 	public $name;
 
 	/**
-	 * @access public
-	 * @var string
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var string
+	 */ 
 	public $value;
 
 
-	public function init($map = null, $prefix='') {
+
+
+	public function init($map = null, $prefix = '') {
 		if($map != null) {
 			$mapKeyName =  $prefix . 'name';
 			if($map != null && array_key_exists($mapKeyName, $map)) {
@@ -129,43 +149,50 @@ class ErrorParameter {
 			if($map != null && array_key_exists($mapKeyName, $map)) {
 				$this->value = $map[$mapKeyName];
 			}
+			
 		}
 	}
-}
+} 
+
+
 
 /**
- * ResponseEnvelope
- * This is the sample message
+ * This is the sample message 
  */
-class ResponseEnvelope {
+class ResponseEnvelope  {
+
 	/**
-	 * @access public
-	 * @var dateTime
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var dateTime
+	 */ 
 	public $timestamp;
 
 	/**
-	 * Application level acknowledgment code.
-	 *
-	 * @access public
-	 * @var AckCode
-	 */
+	 * Application level acknowledgment code. 
+	 *@access public
+	 *@var AckCode
+	 */ 
 	public $ack;
 
 	/**
-	 * @access public
-	 * @var string
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var string
+	 */ 
 	public $correlationId;
 
 	/**
-	 * @access public
-	 * @var string
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var string
+	 */ 
 	public $build;
 
 
-	public function init($map = null, $prefix='') {
+
+
+	public function init($map = null, $prefix = '') {
 		if($map != null) {
 			$mapKeyName =  $prefix . 'timestamp';
 			if($map != null && array_key_exists($mapKeyName, $map)) {
@@ -183,179 +210,199 @@ class ResponseEnvelope {
 			if($map != null && array_key_exists($mapKeyName, $map)) {
 				$this->build = $map[$mapKeyName];
 			}
+			
 		}
 	}
-}
+} 
+
+
 
 /**
- * RequestEnvelope
- * This specifies the list of parameters with every
- * request to the service.
+ * This specifies the list of parameters with every request to
+ * the service. 
  */
-class RequestEnvelope {
+class RequestEnvelope  {
+
 	/**
-	 * This should be the standard RFC 3066
-	 * language identification tag, e.g.,
-	 * en_US.
-	 *
-	 * @access public
-	 * @var string
-	 */
+	 * This should be the standard RFC 3066 language identification
+	 * tag, e.g., en_US. 
+	 *@access public
+	 *@var string
+	 */ 
 	public $errorLanguage;
 
-
+	/**
+	 * Constructor with arguments
+	 */
 	public function __construct($errorLanguage = null) {
-		$this->errorLanguage  = $errorLanguage;
+		$this->errorLanguage = $errorLanguage;
 	}
 
-	public function toNVPString($prefix='') { 
+
+	public function toNVPString($prefix = '') {
 		$str = '';
 		$delim = '';
-		if( $this->errorLanguage != null ) {
+		if($this->errorLanguage != null) {
 			$str .= $delim .  $prefix . 'errorLanguage=' . urlencode($this->errorLanguage);
 			$delim = '&';
 		}
-
 		return $str;
 	}
 
-}
+
+} 
+
+
 
 /**
- * FaultMessage
+ * No Document Comments
  */
-class FaultMessage {
+class FaultMessage  {
+
 	/**
-	 * @access public
-	 * @var ResponseEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var ResponseEnvelope
+	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * array
-	 * @access public
-	 * @var ErrorData
-	 */
+	 * No Document Comments
+     *@array
+	 *@access public
+	 *@var ErrorData
+	 */ 
 	public $error;
 
 
-	public function init($map = null, $prefix='') {
+
+
+	public function init($map = null, $prefix = '') {
 		if($map != null) {
-			if( PPUtils::array_match_key($map, $prefix."responseEnvelope.") ) {
-				$newPrefix = $prefix ."responseEnvelope.";
+			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
+				$newPrefix = $prefix . "responseEnvelope.";
 				$this->responseEnvelope = new ResponseEnvelope();
 				$this->responseEnvelope->init($map, $newPrefix);
 			}
-			$i=0;
+			$i = 0;
 			while(true) {
-				if( PPUtils::array_match_key($map, $prefix."error($i)") ) {
-					$newPrefix = $prefix."error($i).";
+				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
+					$newPrefix = $prefix . "error($i).";
 					$this->error[$i] = new ErrorData();
 					$this->error[$i]->init($map, $newPrefix);
+				} else {
+					break;
 				}
-				else break;
 				$i++;
 			}
+			
 		}
 	}
-}
+} 
+
+
 
 /**
- * RequestPermissionsRequest
- * Describes the request for permissions over an
- * account. Primary element is "scope", which lists
- * the permissions needed.
+ * Describes the request for permissions over an account.
+ * Primary element is "scope", which lists the permissions
+ * needed. 
  */
-class RequestPermissionsRequest {
+class RequestPermissionsRequest  {
+
 	/**
-	 * @access public
-	 * @var RequestEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var RequestEnvelope
+	 */ 
 	public $requestEnvelope;
 
 	/**
-	 * URI of the permissions being requested.
-	 *
-	 * array
-	 * @access public
-	 * @var string
-	 */
+	 * URI of the permissions being requested. 
+     *@array
+	 *@access public
+	 *@var string
+	 */ 
 	public $scope;
 
 	/**
-	 * URL on the client side that will be used
-	 * to communicate completion of the user
-	 * flow. The URL can include query
-	 * parameters.
-	 *
-	 * @access public
-	 * @var string
-	 */
+	 * URL on the client side that will be used to communicate
+	 * completion of the user flow. The URL can include query
+	 * parameters. 
+	 *@access public
+	 *@var string
+	 */ 
 	public $callback;
 
-
+	/**
+	 * Constructor with arguments
+	 */
 	public function __construct($scope = null, $callback = null) {
-		$this->scope  = $scope;
-		$this->callback  = $callback;
+		$this->scope = $scope;
+		$this->callback = $callback;
 	}
 
-	public function toNVPString($prefix='') { 
+
+	public function toNVPString($prefix = '') {
 		$str = '';
 		$delim = '';
-		if( $this->requestEnvelope != null ) {
+		if($this->requestEnvelope != null) {
 			$newPrefix = $prefix . 'requestEnvelope.';
 			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
 			$delim = '&';
 		}
-		for($i=0; $i<count($this->scope);$i++) {
-			$str .= $delim .  $prefix ."scope($i)=" .  urlencode($this->scope[$i]);
-		 }
-		if( $this->callback != null ) {
+		for($i = 0; $i < count($this->scope); $i++) {
+			$str .= $delim .  $prefix . "scope($i)=" .  urlencode($this->scope[$i]);
+			$delim = '&';
+		}
+		if($this->callback != null) {
 			$str .= $delim .  $prefix . 'callback=' . urlencode($this->callback);
 			$delim = '&';
 		}
-
 		return $str;
 	}
 
-}
+
+} 
+
+
 
 /**
- * RequestPermissionsResponse
- * Returns the temporary request token
+ * Returns the temporary request token 
  */
-class RequestPermissionsResponse {
+class RequestPermissionsResponse  {
+
 	/**
-	 * @access public
-	 * @var ResponseEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var ResponseEnvelope
+	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * Temporary token that identifies the
-	 * request for permissions. This token
-	 * cannot be used to access resources on
-	 * the account. It can only be used to
-	 * instruct the user to authorize the
-	 * permissions.
-	 *
-	 * @access public
-	 * @var string
-	 */
+	 * Temporary token that identifies the request for permissions.
+	 * This token cannot be used to access resources on the
+	 * account. It can only be used to instruct the user to
+	 * authorize the permissions. 
+	 *@access public
+	 *@var string
+	 */ 
 	public $token;
 
 	/**
-	 * array
-	 * @access public
-	 * @var ErrorData
-	 */
+	 * No Document Comments
+     *@array
+	 *@access public
+	 *@var ErrorData
+	 */ 
 	public $error;
 
 
-	public function init($map = null, $prefix='') {
+
+
+	public function init($map = null, $prefix = '') {
 		if($map != null) {
-			if( PPUtils::array_match_key($map, $prefix."responseEnvelope.") ) {
-				$newPrefix = $prefix ."responseEnvelope.";
+			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
+				$newPrefix = $prefix . "responseEnvelope.";
 				$this->responseEnvelope = new ResponseEnvelope();
 				$this->responseEnvelope->init($map, $newPrefix);
 			}
@@ -363,155 +410,157 @@ class RequestPermissionsResponse {
 			if($map != null && array_key_exists($mapKeyName, $map)) {
 				$this->token = $map[$mapKeyName];
 			}
-			$i=0;
+			$i = 0;
 			while(true) {
-				if( PPUtils::array_match_key($map, $prefix."error($i)") ) {
-					$newPrefix = $prefix."error($i).";
+				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
+					$newPrefix = $prefix . "error($i).";
 					$this->error[$i] = new ErrorData();
 					$this->error[$i]->init($map, $newPrefix);
+				} else {
+					break;
 				}
-				else break;
 				$i++;
 			}
+			
 		}
 	}
-}
+} 
+
+
 
 /**
- * GetAccessTokenRequest
- * The request use to retrieve a permanent access
- * token. The client can either send the token and
- * verifier, or a subject.
+ * The request use to retrieve a permanent access token. The
+ * client can either send the token and verifier, or a subject.
+ * 
  */
-class GetAccessTokenRequest {
+class GetAccessTokenRequest  {
+
 	/**
-	 * @access public
-	 * @var RequestEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var RequestEnvelope
+	 */ 
 	public $requestEnvelope;
 
 	/**
-	 * The temporary request token received
-	 * from the RequestPermissions call.
-	 *
-	 * @access public
-	 * @var string
-	 */
+	 * The temporary request token received from the
+	 * RequestPermissions call. 
+	 *@access public
+	 *@var string
+	 */ 
 	public $token;
 
 	/**
-	 * The verifier code returned to the client
-	 * after the user authorization flow
-	 * completed.
-	 *
-	 * @access public
-	 * @var string
-	 */
+	 * The verifier code returned to the client after the user
+	 * authorization flow completed. 
+	 *@access public
+	 *@var string
+	 */ 
 	public $verifier;
 
 	/**
-	 * The subject email address used to
-	 * represent existing 3rd Party Permissions
-	 * relationship. This field can be used in
-	 * lieu of the token and verifier.
-	 *
-	 * @access public
-	 * @var string
-	 */
+	 * The subject email address used to represent existing 3rd
+	 * Party Permissions relationship. This field can be used in
+	 * lieu of the token and verifier. 
+	 *@access public
+	 *@var string
+	 */ 
 	public $subjectAlias;
 
 
-	public function toNVPString($prefix='') { 
+	public function toNVPString($prefix = '') {
 		$str = '';
 		$delim = '';
-		if( $this->requestEnvelope != null ) {
+		if($this->requestEnvelope != null) {
 			$newPrefix = $prefix . 'requestEnvelope.';
 			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
 			$delim = '&';
 		}
-		if( $this->token != null ) {
+		if($this->token != null) {
 			$str .= $delim .  $prefix . 'token=' . urlencode($this->token);
 			$delim = '&';
 		}
-		if( $this->verifier != null ) {
+		if($this->verifier != null) {
 			$str .= $delim .  $prefix . 'verifier=' . urlencode($this->verifier);
 			$delim = '&';
 		}
-		if( $this->subjectAlias != null ) {
+		if($this->subjectAlias != null) {
 			$str .= $delim .  $prefix . 'subjectAlias=' . urlencode($this->subjectAlias);
 			$delim = '&';
 		}
-
 		return $str;
 	}
 
-}
+
+} 
+
+
 
 /**
- * GetAccessTokenResponse
- * Permanent access token and token secret that can
- * be used to make requests for protected resources
- * owned by another account.
+ * Permanent access token and token secret that can be used to
+ * make requests for protected resources owned by another
+ * account. 
  */
-class GetAccessTokenResponse {
+class GetAccessTokenResponse  {
+
 	/**
-	 * @access public
-	 * @var ResponseEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var ResponseEnvelope
+	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * Identifier for the permissions approved
-	 * for this relationship.
-	 *
-	 * array
-	 * @access public
-	 * @var string
-	 */
+	 * Identifier for the permissions approved for this
+	 * relationship. 
+     *@array
+	 *@access public
+	 *@var string
+	 */ 
 	public $scope;
 
 	/**
-	 * Permanent access token that identifies
-	 * the relationship that the user
-	 * authorized.
-	 *
-	 * @access public
-	 * @var string
-	 */
+	 * Permanent access token that identifies the relationship that
+	 * the user authorized. 
+	 *@access public
+	 *@var string
+	 */ 
 	public $token;
 
 	/**
-	 * The token secret/password that will need
-	 * to be used when generating the
-	 * signature.
-	 *
-	 * @access public
-	 * @var string
-	 */
+	 * The token secret/password that will need to be used when
+	 * generating the signature. 
+	 *@access public
+	 *@var string
+	 */ 
 	public $tokenSecret;
 
 	/**
-	 * array
-	 * @access public
-	 * @var ErrorData
-	 */
+	 * No Document Comments
+     *@array
+	 *@access public
+	 *@var ErrorData
+	 */ 
 	public $error;
 
 
-	public function init($map = null, $prefix='') {
+
+
+	public function init($map = null, $prefix = '') {
 		if($map != null) {
-			if( PPUtils::array_match_key($map, $prefix."responseEnvelope.") ) {
-				$newPrefix = $prefix ."responseEnvelope.";
+			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
+				$newPrefix = $prefix . "responseEnvelope.";
 				$this->responseEnvelope = new ResponseEnvelope();
 				$this->responseEnvelope->init($map, $newPrefix);
 			}
-			$i=0;
+			$i = 0;
 			while(true) {
-				$mapKeyName = $prefix."scope($i)" ;
-				if (PPUtils :: array_match_key($map, $mapKeyName)) {
+				$mapKeyName = $prefix . "scope($i)";
+				if (PPUtils::array_match_key($map, $mapKeyName)) {
 					$this->scope[$i] = $map[$mapKeyName];
-					}
-				else break;
+				} else {
+					break;
+				}
 				$i++;
 			}
 			$mapKeyName =  $prefix . 'token';
@@ -522,247 +571,289 @@ class GetAccessTokenResponse {
 			if($map != null && array_key_exists($mapKeyName, $map)) {
 				$this->tokenSecret = $map[$mapKeyName];
 			}
-			$i=0;
+			$i = 0;
 			while(true) {
-				if( PPUtils::array_match_key($map, $prefix."error($i)") ) {
-					$newPrefix = $prefix."error($i).";
+				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
+					$newPrefix = $prefix . "error($i).";
 					$this->error[$i] = new ErrorData();
 					$this->error[$i]->init($map, $newPrefix);
+				} else {
+					break;
 				}
-				else break;
 				$i++;
 			}
+			
 		}
 	}
-}
+} 
+
+
 
 /**
- * GetPermissionsRequest
- * Request to retrieve the approved list of
- * permissions associated with a token.
+ * Request to retrieve the approved list of permissions
+ * associated with a token. 
  */
-class GetPermissionsRequest {
+class GetPermissionsRequest  {
+
 	/**
-	 * @access public
-	 * @var RequestEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var RequestEnvelope
+	 */ 
 	public $requestEnvelope;
 
 	/**
-	 * The permanent access token to ask about.
-	 *
-	 * @access public
-	 * @var string
-	 */
+	 * The permanent access token to ask about. 
+	 *@access public
+	 *@var string
+	 */ 
 	public $token;
 
-
+	/**
+	 * Constructor with arguments
+	 */
 	public function __construct($token = null) {
-		$this->token  = $token;
+		$this->token = $token;
 	}
 
-	public function toNVPString($prefix='') { 
+
+	public function toNVPString($prefix = '') {
 		$str = '';
 		$delim = '';
-		if( $this->requestEnvelope != null ) {
+		if($this->requestEnvelope != null) {
 			$newPrefix = $prefix . 'requestEnvelope.';
 			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
 			$delim = '&';
 		}
-		if( $this->token != null ) {
+		if($this->token != null) {
 			$str .= $delim .  $prefix . 'token=' . urlencode($this->token);
 			$delim = '&';
 		}
-
 		return $str;
 	}
 
-}
+
+} 
+
+
 
 /**
- * GetPermissionsResponse
- * The list of permissions associated with the
- * token.
+ * The list of permissions associated with the token. 
  */
-class GetPermissionsResponse {
+class GetPermissionsResponse  {
+
 	/**
-	 * @access public
-	 * @var ResponseEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var ResponseEnvelope
+	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * Identifier for the permissions approved
-	 * for this relationship.
-	 *
-	 * array
-	 * @access public
-	 * @var string
-	 */
+	 * Identifier for the permissions approved for this
+	 * relationship. 
+     *@array
+	 *@access public
+	 *@var string
+	 */ 
 	public $scope;
 
 	/**
-	 * array
-	 * @access public
-	 * @var ErrorData
-	 */
+	 * No Document Comments
+     *@array
+	 *@access public
+	 *@var ErrorData
+	 */ 
 	public $error;
 
 
-	public function init($map = null, $prefix='') {
+
+
+	public function init($map = null, $prefix = '') {
 		if($map != null) {
-			if( PPUtils::array_match_key($map, $prefix."responseEnvelope.") ) {
-				$newPrefix = $prefix ."responseEnvelope.";
+			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
+				$newPrefix = $prefix . "responseEnvelope.";
 				$this->responseEnvelope = new ResponseEnvelope();
 				$this->responseEnvelope->init($map, $newPrefix);
 			}
-			$i=0;
+			$i = 0;
 			while(true) {
-				$mapKeyName = $prefix."scope($i)" ;
-				if (PPUtils :: array_match_key($map, $mapKeyName)) {
+				$mapKeyName = $prefix . "scope($i)";
+				if (PPUtils::array_match_key($map, $mapKeyName)) {
 					$this->scope[$i] = $map[$mapKeyName];
-					}
-				else break;
+				} else {
+					break;
+				}
 				$i++;
 			}
-			$i=0;
+			$i = 0;
 			while(true) {
-				if( PPUtils::array_match_key($map, $prefix."error($i)") ) {
-					$newPrefix = $prefix."error($i).";
+				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
+					$newPrefix = $prefix . "error($i).";
 					$this->error[$i] = new ErrorData();
 					$this->error[$i]->init($map, $newPrefix);
+				} else {
+					break;
 				}
-				else break;
 				$i++;
 			}
+			
 		}
 	}
-}
+} 
+
+
 
 /**
- * CancelPermissionsRequest
- * Request to invalidate an access token and revoke
- * the permissions associated with it.
+ * Request to invalidate an access token and revoke the
+ * permissions associated with it. 
  */
-class CancelPermissionsRequest {
+class CancelPermissionsRequest  {
+
 	/**
-	 * @access public
-	 * @var RequestEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var RequestEnvelope
+	 */ 
 	public $requestEnvelope;
 
 	/**
-	 * @access public
-	 * @var string
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var string
+	 */ 
 	public $token;
 
-
+	/**
+	 * Constructor with arguments
+	 */
 	public function __construct($token = null) {
-		$this->token  = $token;
+		$this->token = $token;
 	}
 
-	public function toNVPString($prefix='') { 
+
+	public function toNVPString($prefix = '') {
 		$str = '';
 		$delim = '';
-		if( $this->requestEnvelope != null ) {
+		if($this->requestEnvelope != null) {
 			$newPrefix = $prefix . 'requestEnvelope.';
 			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
 			$delim = '&';
 		}
-		if( $this->token != null ) {
+		if($this->token != null) {
 			$str .= $delim .  $prefix . 'token=' . urlencode($this->token);
 			$delim = '&';
 		}
-
 		return $str;
 	}
 
-}
+
+} 
+
+
 
 /**
- * CancelPermissionsResponse
+ * No Document Comments
  */
-class CancelPermissionsResponse {
+class CancelPermissionsResponse  {
+
 	/**
-	 * @access public
-	 * @var ResponseEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var ResponseEnvelope
+	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * array
-	 * @access public
-	 * @var ErrorData
-	 */
+	 * No Document Comments
+     *@array
+	 *@access public
+	 *@var ErrorData
+	 */ 
 	public $error;
 
 
-	public function init($map = null, $prefix='') {
+
+
+	public function init($map = null, $prefix = '') {
 		if($map != null) {
-			if( PPUtils::array_match_key($map, $prefix."responseEnvelope.") ) {
-				$newPrefix = $prefix ."responseEnvelope.";
+			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
+				$newPrefix = $prefix . "responseEnvelope.";
 				$this->responseEnvelope = new ResponseEnvelope();
 				$this->responseEnvelope->init($map, $newPrefix);
 			}
-			$i=0;
+			$i = 0;
 			while(true) {
-				if( PPUtils::array_match_key($map, $prefix."error($i)") ) {
-					$newPrefix = $prefix."error($i).";
+				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
+					$newPrefix = $prefix . "error($i).";
 					$this->error[$i] = new ErrorData();
 					$this->error[$i]->init($map, $newPrefix);
+				} else {
+					break;
 				}
-				else break;
 				$i++;
 			}
+			
 		}
 	}
-}
+} 
+
+
 
 /**
- * PersonalAttributeList
  * List of Personal Attributes to be sent as a request. 
  */
-class PersonalAttributeList {
+class PersonalAttributeList  {
+
 	/**
-	 * array
-	 * @access public
-	 * @var PersonalAttribute
-	 */
+	 * No Document Comments
+     *@array
+	 *@access public
+	 *@var PersonalAttribute
+	 */ 
 	public $attribute;
 
 
-	public function toNVPString($prefix='') { 
+	public function toNVPString($prefix = '') {
 		$str = '';
 		$delim = '';
-		for($i=0; $i<count($this->attribute);$i++) {
-			$str .= $delim .  $prefix ."attribute($i)=" .  urlencode($this->attribute[$i]);
-		 }
-
+		for($i = 0; $i < count($this->attribute); $i++) {
+			$str .= $delim .  $prefix . "attribute($i)=" .  urlencode($this->attribute[$i]);
+			$delim = '&';
+		}
 		return $str;
 	}
 
-}
+
+} 
+
+
 
 /**
- * PersonalData
- * A property of User Identity data , represented as a Name-value pair with Name being the PersonalAttribute requested and value being the data.
+ * A property of User Identity data , represented as a
+ * Name-value pair with Name being the PersonalAttribute
+ * requested and value being the data. 
  */
-class PersonalData {
+class PersonalData  {
+
 	/**
-	 * @access public
-	 * @var PersonalAttribute
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var PersonalAttribute
+	 */ 
 	public $personalDataKey;
 
 	/**
-	 * @access public
-	 * @var string
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var string
+	 */ 
 	public $personalDataValue;
 
 
-	public function init($map = null, $prefix='') {
+
+
+	public function init($map = null, $prefix = '') {
 		if($map != null) {
 			$mapKeyName =  $prefix . 'personalDataKey';
 			if($map != null && array_key_exists($mapKeyName, $map)) {
@@ -772,222 +863,271 @@ class PersonalData {
 			if($map != null && array_key_exists($mapKeyName, $map)) {
 				$this->personalDataValue = $map[$mapKeyName];
 			}
+			
 		}
 	}
-}
+} 
+
+
 
 /**
- * PersonalDataList
- * Set of personal data which forms the response of GetPersonalData call.
+ * Set of personal data which forms the response of
+ * GetPersonalData call. 
  */
-class PersonalDataList {
+class PersonalDataList  {
+
 	/**
-	 * array
-	 * @access public
-	 * @var PersonalData
-	 */
+	 * No Document Comments
+     *@array
+	 *@access public
+	 *@var PersonalData
+	 */ 
 	public $personalData;
 
 
-	public function init($map = null, $prefix='') {
+
+
+	public function init($map = null, $prefix = '') {
 		if($map != null) {
-			$i=0;
+			$i = 0;
 			while(true) {
-				if( PPUtils::array_match_key($map, $prefix."personalData($i)") ) {
-					$newPrefix = $prefix."personalData($i).";
+				if (PPUtils::array_match_key($map, $prefix . "personalData($i)")) {
+					$newPrefix = $prefix . "personalData($i).";
 					$this->personalData[$i] = new PersonalData();
 					$this->personalData[$i]->init($map, $newPrefix);
+				} else {
+					break;
 				}
-				else break;
 				$i++;
 			}
+			
 		}
 	}
-}
+} 
+
+
 
 /**
- * GetBasicPersonalDataRequest
- * Request to retrieve basic personal data.Accepts PersonalAttributeList as request and responds with PersonalDataList.
- * This call will accept only 'Basic' attributes and ignore others. 
+ * Request to retrieve basic personal data.Accepts
+ * PersonalAttributeList as request and responds with
+ * PersonalDataList. This call will accept only 'Basic'
+ * attributes and ignore others. 
  */
-class GetBasicPersonalDataRequest {
+class GetBasicPersonalDataRequest  {
+
 	/**
-	 * @access public
-	 * @var RequestEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var RequestEnvelope
+	 */ 
 	public $requestEnvelope;
 
 	/**
-	 * @access public
-	 * @var PersonalAttributeList
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var PersonalAttributeList
+	 */ 
 	public $attributeList;
 
-
+	/**
+	 * Constructor with arguments
+	 */
 	public function __construct($attributeList = null) {
-		$this->attributeList  = $attributeList;
+		$this->attributeList = $attributeList;
 	}
 
-	public function toNVPString($prefix='') { 
+
+	public function toNVPString($prefix = '') {
 		$str = '';
 		$delim = '';
-		if( $this->requestEnvelope != null ) {
+		if($this->requestEnvelope != null) {
 			$newPrefix = $prefix . 'requestEnvelope.';
 			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
 			$delim = '&';
 		}
-		if( $this->attributeList != null ) {
+		if($this->attributeList != null) {
 			$newPrefix = $prefix . 'attributeList.';
 			$str .= $delim . call_user_func(array($this->attributeList, 'toNVPString'), $newPrefix);
 			$delim = '&';
 		}
-
 		return $str;
 	}
 
-}
+
+} 
+
+
 
 /**
- * GetAdvancedPersonalDataRequest
- * Request to retrieve personal data.Accepts PersonalAttributeList as request and responds with PersonalDataList.
- * This call will accept both 'Basic' and Advanced attributes. 
+ * Request to retrieve personal data.Accepts
+ * PersonalAttributeList as request and responds with
+ * PersonalDataList. This call will accept both 'Basic' and
+ * Advanced attributes. 
  */
-class GetAdvancedPersonalDataRequest {
+class GetAdvancedPersonalDataRequest  {
+
 	/**
-	 * @access public
-	 * @var RequestEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var RequestEnvelope
+	 */ 
 	public $requestEnvelope;
 
 	/**
-	 * @access public
-	 * @var PersonalAttributeList
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var PersonalAttributeList
+	 */ 
 	public $attributeList;
 
-
+	/**
+	 * Constructor with arguments
+	 */
 	public function __construct($attributeList = null) {
-		$this->attributeList  = $attributeList;
+		$this->attributeList = $attributeList;
 	}
 
-	public function toNVPString($prefix='') { 
+
+	public function toNVPString($prefix = '') {
 		$str = '';
 		$delim = '';
-		if( $this->requestEnvelope != null ) {
+		if($this->requestEnvelope != null) {
 			$newPrefix = $prefix . 'requestEnvelope.';
 			$str .= $delim . call_user_func(array($this->requestEnvelope, 'toNVPString'), $newPrefix);
 			$delim = '&';
 		}
-		if( $this->attributeList != null ) {
+		if($this->attributeList != null) {
 			$newPrefix = $prefix . 'attributeList.';
 			$str .= $delim . call_user_func(array($this->attributeList, 'toNVPString'), $newPrefix);
 			$delim = '&';
 		}
-
 		return $str;
 	}
 
-}
+
+} 
+
+
 
 /**
- * GetBasicPersonalDataResponse
+ * No Document Comments
  */
-class GetBasicPersonalDataResponse {
+class GetBasicPersonalDataResponse  {
+
 	/**
-	 * @access public
-	 * @var ResponseEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var ResponseEnvelope
+	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * @access public
-	 * @var PersonalDataList
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var PersonalDataList
+	 */ 
 	public $response;
 
 	/**
-	 * array
-	 * @access public
-	 * @var ErrorData
-	 */
+	 * No Document Comments
+     *@array
+	 *@access public
+	 *@var ErrorData
+	 */ 
 	public $error;
 
 
-	public function init($map = null, $prefix='') {
+
+
+	public function init($map = null, $prefix = '') {
 		if($map != null) {
-			if( PPUtils::array_match_key($map, $prefix."responseEnvelope.") ) {
-				$newPrefix = $prefix ."responseEnvelope.";
+			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
+				$newPrefix = $prefix . "responseEnvelope.";
 				$this->responseEnvelope = new ResponseEnvelope();
 				$this->responseEnvelope->init($map, $newPrefix);
 			}
-			if( PPUtils::array_match_key($map, $prefix."response.") ) {
-				$newPrefix = $prefix ."response.";
+			if (PPUtils::array_match_key($map, $prefix . "response.")) {
+				$newPrefix = $prefix . "response.";
 				$this->response = new PersonalDataList();
 				$this->response->init($map, $newPrefix);
 			}
-			$i=0;
+			$i = 0;
 			while(true) {
-				if( PPUtils::array_match_key($map, $prefix."error($i)") ) {
-					$newPrefix = $prefix."error($i).";
+				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
+					$newPrefix = $prefix . "error($i).";
 					$this->error[$i] = new ErrorData();
 					$this->error[$i]->init($map, $newPrefix);
+				} else {
+					break;
 				}
-				else break;
 				$i++;
 			}
+			
 		}
 	}
-}
+} 
+
+
 
 /**
- * GetAdvancedPersonalDataResponse
+ * No Document Comments
  */
-class GetAdvancedPersonalDataResponse {
+class GetAdvancedPersonalDataResponse  {
+
 	/**
-	 * @access public
-	 * @var ResponseEnvelope
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var ResponseEnvelope
+	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * @access public
-	 * @var PersonalDataList
-	 */
+	 * No Document Comments
+	 *@access public
+	 *@var PersonalDataList
+	 */ 
 	public $response;
 
 	/**
-	 * array
-	 * @access public
-	 * @var ErrorData
-	 */
+	 * No Document Comments
+     *@array
+	 *@access public
+	 *@var ErrorData
+	 */ 
 	public $error;
 
 
-	public function init($map = null, $prefix='') {
+
+
+	public function init($map = null, $prefix = '') {
 		if($map != null) {
-			if( PPUtils::array_match_key($map, $prefix."responseEnvelope.") ) {
-				$newPrefix = $prefix ."responseEnvelope.";
+			if (PPUtils::array_match_key($map, $prefix . "responseEnvelope.")) {
+				$newPrefix = $prefix . "responseEnvelope.";
 				$this->responseEnvelope = new ResponseEnvelope();
 				$this->responseEnvelope->init($map, $newPrefix);
 			}
-			if( PPUtils::array_match_key($map, $prefix."response.") ) {
-				$newPrefix = $prefix ."response.";
+			if (PPUtils::array_match_key($map, $prefix . "response.")) {
+				$newPrefix = $prefix . "response.";
 				$this->response = new PersonalDataList();
 				$this->response->init($map, $newPrefix);
 			}
-			$i=0;
+			$i = 0;
 			while(true) {
-				if( PPUtils::array_match_key($map, $prefix."error($i)") ) {
-					$newPrefix = $prefix."error($i).";
+				if (PPUtils::array_match_key($map, $prefix . "error($i)")) {
+					$newPrefix = $prefix . "error($i).";
 					$this->error[$i] = new ErrorData();
 					$this->error[$i]->init($map, $newPrefix);
+				} else {
+					break;
 				}
-				else break;
 				$i++;
 			}
+			
 		}
 	}
-}
+} 
+
+
+
 
 ?>
-

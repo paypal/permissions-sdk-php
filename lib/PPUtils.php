@@ -1,7 +1,7 @@
 <?php
 class PPUtils {
 
-	const SDK_VERSION = "0.7.88";
+	const SDK_VERSION = "0.7.92";
 	const SDK_NAME = "sdk-permissions-php ";
 
 	/**

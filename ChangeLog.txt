@@ -1,6 +1,10 @@
-PayPal Adaptive Accounts PHP SDK - 0.7.88
+
+Version 0.7.92 - July 17, 2012 
+    - wsdl update version 0.7.92
+------------------------------------------
+	
+Version 0.7.88 - Apr 17, 2012
 ----------------------------------------
-Date - 17-Apr-2012
 	- Fix to get SDK working with Permissions API token
 	- wsdl update version 88.0
 
