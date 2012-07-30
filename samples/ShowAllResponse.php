@@ -2,8 +2,9 @@
 
   <table align="center" style="text-align:left">
 	        	<?php 
-    		var_dump($response);
-    			
+	        	echo "<pre>";
+    		print_r($response);
+    			echo "<pre>";
        			?>
   </table>
 </html>
