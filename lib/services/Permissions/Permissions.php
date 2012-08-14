@@ -5,61 +5,61 @@
   * 
   */
 /**
- * No Document Comments
+ * 
  */
 class ErrorData  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var integer
 	 */ 
 	public $errorId;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $domain;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $subdomain;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ErrorSeverity
 	 */ 
 	public $severity;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ErrorCategory
 	 */ 
 	public $category;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $message;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $exceptionId;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorParameter
@@ -118,19 +118,19 @@ class ErrorData  {
 
 
 /**
- * No Document Comments
+ * 
  */
 class ErrorParameter  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $name;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -162,7 +162,7 @@ class ErrorParameter  {
 class ResponseEnvelope  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var dateTime
 	 */ 
@@ -176,14 +176,14 @@ class ResponseEnvelope  {
 	public $ack;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
 	public $correlationId;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -255,19 +255,19 @@ class RequestEnvelope  {
 
 
 /**
- * No Document Comments
+ * 
  */
 class FaultMessage  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -310,7 +310,7 @@ class FaultMessage  {
 class RequestPermissionsRequest  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var RequestEnvelope
 	 */ 
@@ -372,7 +372,7 @@ class RequestPermissionsRequest  {
 class RequestPermissionsResponse  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
@@ -389,7 +389,7 @@ class RequestPermissionsResponse  {
 	public $token;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -436,7 +436,7 @@ class RequestPermissionsResponse  {
 class GetAccessTokenRequest  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var RequestEnvelope
 	 */ 
@@ -504,7 +504,7 @@ class GetAccessTokenRequest  {
 class GetAccessTokenResponse  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
@@ -536,7 +536,7 @@ class GetAccessTokenResponse  {
 	public $tokenSecret;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -596,7 +596,7 @@ class GetAccessTokenResponse  {
 class GetPermissionsRequest  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var RequestEnvelope
 	 */ 
@@ -643,7 +643,7 @@ class GetPermissionsRequest  {
 class GetPermissionsResponse  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
@@ -659,7 +659,7 @@ class GetPermissionsResponse  {
 	public $scope;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -711,14 +711,14 @@ class GetPermissionsResponse  {
 class CancelPermissionsRequest  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -753,19 +753,19 @@ class CancelPermissionsRequest  {
 
 
 /**
- * No Document Comments
+ * 
  */
 class CancelPermissionsResponse  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -806,7 +806,7 @@ class CancelPermissionsResponse  {
 class PersonalAttributeList  {
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var PersonalAttribute
@@ -837,14 +837,14 @@ class PersonalAttributeList  {
 class PersonalData  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var PersonalAttribute
 	 */ 
 	public $personalDataKey;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var string
 	 */ 
@@ -877,7 +877,7 @@ class PersonalData  {
 class PersonalDataList  {
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var PersonalData
@@ -916,14 +916,14 @@ class PersonalDataList  {
 class GetBasicPersonalDataRequest  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var PersonalAttributeList
 	 */ 
@@ -967,14 +967,14 @@ class GetBasicPersonalDataRequest  {
 class GetAdvancedPersonalDataRequest  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var RequestEnvelope
 	 */ 
 	public $requestEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var PersonalAttributeList
 	 */ 
@@ -1010,26 +1010,26 @@ class GetAdvancedPersonalDataRequest  {
 
 
 /**
- * No Document Comments
+ * 
  */
 class GetBasicPersonalDataResponse  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var PersonalDataList
 	 */ 
 	public $response;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
@@ -1070,26 +1070,26 @@ class GetBasicPersonalDataResponse  {
 
 
 /**
- * No Document Comments
+ * 
  */
 class GetAdvancedPersonalDataResponse  {
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var ResponseEnvelope
 	 */ 
 	public $responseEnvelope;
 
 	/**
-	 * No Document Comments
+	 * 
 	 *@access public
 	 *@var PersonalDataList
 	 */ 
 	public $response;
 
 	/**
-	 * No Document Comments
+	 * 
      *@array
 	 *@access public
 	 *@var ErrorData
