@@ -56,6 +56,12 @@ catch(Exception $ex) {
 </center>
 
 <?php
+echo "<table>";
+echo "<tr><td>Ack :</td><td><div id='Ack'>". $response->responseEnvelope->ack ."</div> </td></tr>";
+echo "<tr><td>Token :</td><td><div id='Token'>". $response->token ."</div> </td></tr>";
+echo "<tr><td>TokenSecret :</td><td><div id='TokenSecret'>". $response->tokenSecret ."</div> </td></tr>";
+echo "</table>";
+
 require_once 'ShowAllResponse.php';
 ?>
 <table width="600" align="center">

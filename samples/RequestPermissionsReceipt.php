@@ -70,19 +70,14 @@ catch(Exception $ex) {
 require_once 'ShowAllResponse.php';
 $token = $response->token;
 $payPalURL = 'https://www.sandbox.paypal.com/webscr&cmd='.'_grant-permission&request_token='.$token;
-
+echo "<table>";
+echo "<tr><td>Ack :</td><td><div id='Ack'>". $response->responseEnvelope->ack ."</div> </td></tr>";
+echo "<tr><td>Token :</td><td><div id='Token'>". $response->token ."</div> </td></tr>";
+echo "<tr><td><a href=$payPalURL><b>* Redirect URL to Complete RequestPermissions API operation </b></a></td></tr>";
+echo "</table>";
 
 ?>
-<table width="600" align="center">
-	<tr>
-		<td><a href=<?php echo $payPalURL;?>><b>* Redirect URL to Complete
-		RequestPermissions API operation </b></a></td>
-	</tr>
-</table>
-
 
 </div>
-
-
 </body>
 </html>
