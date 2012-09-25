@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Request Permissions</title>
+<title>PayPal Permissions - Request Permissions</title>
 
 </head>
 <body>
@@ -14,11 +14,7 @@
 <h3>Permissions - Request Permissions</h3>
 <table>
 	<tr>
-		<td class="thinfield" width="120"><a href="">Scope:</a>
-		<div id="Scope"
-			style="display: none; position: absolute; border-style: solid; background-color: white; padding: 20px;">
-		</div>
-		</td>
+		<td class="thinfield" width="120">Scope</td>
 		<td align="left"><input type=checkbox name=chkScope[]
 			value='EXPRESS_CHECKOUT' /> EXPRESS_CHECKOUT <br />
 		<input type=checkbox name=chkScope[] value='DIRECT_PAYMENT' />

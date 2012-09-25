@@ -8,7 +8,7 @@
 
 <html>
 <head>
-<title>Permissions - Get Access Token</title>
+<title>PayPal Permissions - Get Access Token</title>
 </head>
 <body>
 <center>
