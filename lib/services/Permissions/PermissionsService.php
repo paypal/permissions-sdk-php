@@ -26,7 +26,7 @@ class PermissionsService extends PPBaseService {
 	 * @return RequestPermissionsResponse
 	 * @throws APIException
 	 */
-	public function RequestPermissions($requestPermissionsRequest, $apiUsername = null) {
+	public function RequestPermissions($requestPermissionsRequest, $apiUsername = NULL) {
 		$ret = new RequestPermissionsResponse();
 		$resp = $this->call("RequestPermissions", $requestPermissionsRequest, $apiUsername);
 		$ret->init(PPUtils::nvpToMap($resp));
@@ -40,7 +40,7 @@ class PermissionsService extends PPBaseService {
 	 * @return GetAccessTokenResponse
 	 * @throws APIException
 	 */
-	public function GetAccessToken($getAccessTokenRequest, $apiUsername = null) {
+	public function GetAccessToken($getAccessTokenRequest, $apiUsername = NULL) {
 		$ret = new GetAccessTokenResponse();
 		$resp = $this->call("GetAccessToken", $getAccessTokenRequest, $apiUsername);
 		$ret->init(PPUtils::nvpToMap($resp));
@@ -54,7 +54,7 @@ class PermissionsService extends PPBaseService {
 	 * @return GetPermissionsResponse
 	 * @throws APIException
 	 */
-	public function GetPermissions($getPermissionsRequest, $apiUsername = null) {
+	public function GetPermissions($getPermissionsRequest, $apiUsername = NULL) {
 		$ret = new GetPermissionsResponse();
 		$resp = $this->call("GetPermissions", $getPermissionsRequest, $apiUsername);
 		$ret->init(PPUtils::nvpToMap($resp));
@@ -68,7 +68,7 @@ class PermissionsService extends PPBaseService {
 	 * @return CancelPermissionsResponse
 	 * @throws APIException
 	 */
-	public function CancelPermissions($cancelPermissionsRequest, $apiUsername = null) {
+	public function CancelPermissions($cancelPermissionsRequest, $apiUsername = NULL) {
 		$ret = new CancelPermissionsResponse();
 		$resp = $this->call("CancelPermissions", $cancelPermissionsRequest, $apiUsername);
 		$ret->init(PPUtils::nvpToMap($resp));
@@ -82,7 +82,7 @@ class PermissionsService extends PPBaseService {
 	 * @return GetBasicPersonalDataResponse
 	 * @throws APIException
 	 */
-	public function GetBasicPersonalData($getBasicPersonalDataRequest, $apiUsername = null) {
+	public function GetBasicPersonalData($getBasicPersonalDataRequest, $apiUsername = NULL) {
 		$ret = new GetBasicPersonalDataResponse();
 		$resp = $this->call("GetBasicPersonalData", $getBasicPersonalDataRequest, $apiUsername);
 		$ret->init(PPUtils::nvpToMap($resp));
@@ -96,7 +96,7 @@ class PermissionsService extends PPBaseService {
 	 * @return GetAdvancedPersonalDataResponse
 	 * @throws APIException
 	 */
-	public function GetAdvancedPersonalData($getAdvancedPersonalDataRequest, $apiUsername = null) {
+	public function GetAdvancedPersonalData($getAdvancedPersonalDataRequest, $apiUsername = NULL) {
 		$ret = new GetAdvancedPersonalDataResponse();
 		$resp = $this->call("GetAdvancedPersonalData", $getAdvancedPersonalDataRequest, $apiUsername);
 		$ret->init(PPUtils::nvpToMap($resp));
