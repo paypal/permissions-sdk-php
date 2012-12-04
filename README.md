@@ -83,4 +83,4 @@ Getting help
 
 If you need help using the SDK, a new feature that you need or have a issue to report, please visit
    
-   https://github.com/paypal/permissions-php-sdk/issues 
+   https://github.com/paypal/permissions-sdk-php/issues 
