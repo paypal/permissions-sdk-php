@@ -4,7 +4,7 @@ class PPUtils
 
 	const SDK_VERSION = "2.0.95";
 
-	const SDK_NAME = "adaptivepayments-php-sdk";
+	const SDK_NAME = "permissions-php-sdk";
 
 
 
