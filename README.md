@@ -2,16 +2,6 @@
 PayPal PHP Permissions SDK
 ==========================
 
-This is a "Work in progress" SDK. If you are looking for a Permissions SDK, please see 
-
-https://www.x.com/developers/paypal/documentation-tools/paypal-sdk-index#permissionsnew
-
-  OR 
-
-https://github.com/paypal/SDKs/tree/master/Permissions/permissions-php-sdk
-
-
-
 Prerequisites
 -------------
 

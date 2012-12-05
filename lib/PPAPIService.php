@@ -2,7 +2,6 @@
 require_once 'PPCredentialManager.php';
 require_once 'PPConnectionManager.php';
 require_once 'PPHttpConfig.php';
-require_once 'PPObjectTransformer.php';
 require_once 'PPLoggingManager.php';
 require_once 'PPRequest.php';
 require_once 'PPUtils.php';

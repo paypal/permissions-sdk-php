@@ -1,11 +1,9 @@
 <?php
-require_once 'PHPUnit/Framework.php';
-
 require_once 'PPUtils.php';
 
 /**
  * Test class for PPUtils.
- * 
+ *
  */
 class PPUtilsTest extends PHPUnit_Framework_TestCase
 {
@@ -61,7 +59,6 @@ class PPUtilsTest extends PHPUnit_Framework_TestCase
         $ip = $this->object->getLocalIPAddress();
         //$this->assertEquals('127.0.0.1',$ip);
     }
-
 
 }
 ?>
