@@ -1,4 +1,3 @@
-
 Version 1.2.95 - September 28, 2012
  
 	- Bug fixed for 'PPLoggingManager.php' to pickup configuration entries.(https://github.com/paypal/SDKs/issues/28)
