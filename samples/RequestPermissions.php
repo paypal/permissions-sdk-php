@@ -61,6 +61,8 @@
 			value='ACCOUNT_MANAGEMENT_PERMISSION' />
 		ACCOUNT_MANAGEMENT_PERMISSION <br />
 		<input type=checkbox name=chkScope[] value='INVOICING' /> INVOICING <br />
+		<input type=checkbox name=chkScope[] value='ACCESS_BASIC_PERSONAL_DATA' /> ACCESS_BASIC_PERSONAL_DATA <br />
+		<input type=checkbox name=chkScope[] value='ACCESS_ADVANCED_PERSONAL_DATA' /> ACCESS_ADVANCED_PERSONAL_DATA <br />
 		</td>
 	</tr>
 	<tr align="center">
