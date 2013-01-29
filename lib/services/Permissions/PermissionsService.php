@@ -1,6 +1,5 @@
 <?php 
 
-
 /**
  * AUTO GENERATED code for Permissions
  */
@@ -20,6 +19,8 @@ class PermissionsService extends PPBaseService {
 
 	public function __construct() {
 		parent::__construct(self::$SERVICE_NAME, 'NV', array('PPPlatformServiceHandler'));
+        parent::$SDK_NAME    = self::$SDK_NAME ;
+        parent::$SDK_VERSION = self::$SDK_VERSION;
 	}
 
 
