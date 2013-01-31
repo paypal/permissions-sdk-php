@@ -9,7 +9,7 @@ require_once 'PPMessage.php';
 /**
  * 
  */
-if(!class_exists('ErrorData')) {
+ 
 class ErrorData  
   extends PPMessage   {
 
@@ -88,7 +88,6 @@ class ErrorData
 
 
 }
-}
 
 
 
@@ -96,7 +95,7 @@ class ErrorData
  * @hasAttribute
  * 
  */
-if(!class_exists('ErrorParameter')) {
+ 
 class ErrorParameter  
   extends PPMessage   {
 
@@ -124,14 +123,13 @@ class ErrorParameter
 
 
 }
-}
 
 
 
 /**
  * This is the sample message 
  */
-if(!class_exists('ResponseEnvelope')) {
+ 
 class ResponseEnvelope  
   extends PPMessage   {
 
@@ -173,7 +171,6 @@ class ResponseEnvelope
 
 
 }
-}
 
 
 
@@ -181,7 +178,7 @@ class ResponseEnvelope
  * This specifies the list of parameters with every request to
  * the service. 
  */
-if(!class_exists('RequestEnvelope')) {
+ 
 class RequestEnvelope  
   extends PPMessage   {
 
@@ -204,14 +201,13 @@ class RequestEnvelope
 
 
 }
-}
 
 
 
 /**
  * 
  */
-if(!class_exists('FaultMessage')) {
+ 
 class FaultMessage  
   extends PPMessage   {
 
@@ -236,7 +232,6 @@ class FaultMessage
 
 
 }
-}
 
 
 
@@ -245,6 +240,7 @@ class FaultMessage
  * Primary element is "scope", which lists the permissions
  * needed. 
  */
+ 
 class RequestPermissionsRequest  
   extends PPMessage   {
 
@@ -294,6 +290,7 @@ class RequestPermissionsRequest
 /**
  * Returns the temporary request token 
  */
+ 
 class RequestPermissionsResponse  
   extends PPMessage   {
 
@@ -338,6 +335,7 @@ class RequestPermissionsResponse
  * client can either send the token and verifier, or a subject.
  * 
  */
+ 
 class GetAccessTokenRequest  
   extends PPMessage   {
 
@@ -391,6 +389,7 @@ class GetAccessTokenRequest
  * make requests for protected resources owned by another
  * account. 
  */
+ 
 class GetAccessTokenResponse  
   extends PPMessage   {
 
@@ -453,6 +452,7 @@ class GetAccessTokenResponse
  * Request to retrieve the approved list of permissions
  * associated with a token. 
  */
+ 
 class GetPermissionsRequest  
   extends PPMessage   {
 
@@ -489,6 +489,7 @@ class GetPermissionsRequest
 /**
  * The list of permissions associated with the token. 
  */
+ 
 class GetPermissionsResponse  
   extends PPMessage   {
 
@@ -531,6 +532,7 @@ class GetPermissionsResponse
  * Request to invalidate an access token and revoke the
  * permissions associated with it. 
  */
+ 
 class CancelPermissionsRequest  
   extends PPMessage   {
 
@@ -567,6 +569,7 @@ class CancelPermissionsRequest
 /**
  * 
  */
+ 
 class CancelPermissionsResponse  
   extends PPMessage   {
 
@@ -597,6 +600,7 @@ class CancelPermissionsResponse
 /**
  * List of Personal Attributes to be sent as a request. 
  */
+ 
 class PersonalAttributeList  
   extends PPMessage   {
 
@@ -620,6 +624,7 @@ class PersonalAttributeList
  * Name-value pair with Name being the PersonalAttribute
  * requested and value being the data. 
  */
+ 
 class PersonalData  
   extends PPMessage   {
 
@@ -650,6 +655,7 @@ class PersonalData
  * Set of personal data which forms the response of
  * GetPersonalData call. 
  */
+ 
 class PersonalDataList  
   extends PPMessage   {
 
@@ -674,6 +680,7 @@ class PersonalDataList
  * PersonalDataList. This call will accept only 'Basic'
  * attributes and ignore others. 
  */
+ 
 class GetBasicPersonalDataRequest  
   extends PPMessage   {
 
@@ -713,6 +720,7 @@ class GetBasicPersonalDataRequest
  * PersonalDataList. This call will accept both 'Basic' and
  * Advanced attributes. 
  */
+ 
 class GetAdvancedPersonalDataRequest  
   extends PPMessage   {
 
@@ -749,6 +757,7 @@ class GetAdvancedPersonalDataRequest
 /**
  * 
  */
+ 
 class GetBasicPersonalDataResponse  
   extends PPMessage   {
 
@@ -788,6 +797,7 @@ class GetBasicPersonalDataResponse
 /**
  * 
  */
+ 
 class GetAdvancedPersonalDataResponse  
   extends PPMessage   {
 
