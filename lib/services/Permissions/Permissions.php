@@ -4,6 +4,8 @@
   * Auto generated code 
   * 
   */
+require_once 'PPUtils.php';
+require_once 'PPMessage.php';	
 /**
  * 
  */
