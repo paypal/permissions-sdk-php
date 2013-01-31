@@ -2,7 +2,6 @@
     "name": "paypal/permissions-sdk-php",
     "description": "PayPal permission SDK for PHP",
     "keywords": ["paypal", "php", "sdk"],
-    "type": "library",
     "homepage": "https://x.com",
     "license": "Apache2",
     "authors": [
