@@ -12,10 +12,10 @@ class PermissionsService extends PPBaseService {
 	private static $SERVICE_NAME = "Permissions";
 
     // SDK Name
-	protected static $SDK_NAME = "sdkname";
+	protected static $SDK_NAME = "permissions-php-sdk";
 	
 	// SDK Version
-	protected static $SDK_VERSION = "sdkversion";
+	protected static $SDK_VERSION = "2.3.100";
 
 	public function __construct($config = null) {
 		parent::__construct(self::$SERVICE_NAME, 'NV', array('PPPlatformServiceHandler'), $config);
