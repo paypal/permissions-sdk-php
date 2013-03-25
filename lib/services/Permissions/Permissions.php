@@ -5,14 +5,14 @@
   * 
   */
 /**
- * 
+ *  
  */
 if(!class_exists('ErrorData', false)) {
 class ErrorData  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -21,7 +21,7 @@ class ErrorData
 	public $errorId;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -30,7 +30,7 @@ class ErrorData
 	public $domain;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -39,7 +39,7 @@ class ErrorData
 	public $subdomain;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -48,7 +48,7 @@ class ErrorData
 	public $severity;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -57,7 +57,7 @@ class ErrorData
 	public $category;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -66,7 +66,7 @@ class ErrorData
 	public $message;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -75,7 +75,7 @@ class ErrorData
 	public $exceptionId;
 
 	/**
-	 * 
+	*  
      * @array
 	 * @access public
 	 
@@ -92,14 +92,14 @@ class ErrorData
 
 /**
  * @hasAttribute
- * 
+ *  
  */
 if(!class_exists('ErrorParameter', false)) {
 class ErrorParameter  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 
@@ -110,7 +110,7 @@ class ErrorParameter
 	public $name;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 
@@ -127,14 +127,14 @@ class ErrorParameter
 
 
 /**
- * This is the sample message 
+ *  This is the sample message 
  */
 if(!class_exists('ResponseEnvelope', false)) {
 class ResponseEnvelope  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -143,7 +143,7 @@ class ResponseEnvelope
 	public $timestamp;
 
 	/**
-	 * Application level acknowledgment code. 
+	*  Application level acknowledgment code. 
 	 * @access public
 	 
 	 	 	 	 
@@ -152,7 +152,7 @@ class ResponseEnvelope
 	public $ack;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -161,7 +161,7 @@ class ResponseEnvelope
 	public $correlationId;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -176,16 +176,16 @@ class ResponseEnvelope
 
 
 /**
- * This specifies the list of parameters with every request to
- * the service. 
+ *  This specifies the list of parameters with every request to
+ *  the service. 
  */
 if(!class_exists('RequestEnvelope', false)) {
 class RequestEnvelope  
   extends PPMessage   {
 
 	/**
-	 * This should be the standard RFC 3066 language identification
-	 * tag, e.g., en_US. 
+	*  This should be the standard RFC 3066 language identification
+	*  tag, e.g., en_US. 
 	 * @access public
 	 
 	 	 	 	 
@@ -207,14 +207,14 @@ class RequestEnvelope
 
 
 /**
- * 
+ *  
  */
 if(!class_exists('FaultMessage', false)) {
 class FaultMessage  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -223,7 +223,7 @@ class FaultMessage
 	public $responseEnvelope;
 
 	/**
-	 * 
+	*  
      * @array
 	 * @access public
 	 
@@ -239,15 +239,15 @@ class FaultMessage
 
 
 /**
- * Describes the request for permissions over an account.
- * Primary element is "scope", which lists the permissions
- * needed. 
+ *  Describes the request for permissions over an account.
+ *  Primary element is "scope", which lists the permissions
+ *  needed. 
  */
 class RequestPermissionsRequest  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -256,7 +256,7 @@ class RequestPermissionsRequest
 	public $requestEnvelope;
 
 	/**
-	 * URI of the permissions being requested. 
+	*  URI of the permissions being requested. 
      * @array
 	 * @access public
 	 
@@ -266,9 +266,9 @@ class RequestPermissionsRequest
 	public $scope;
 
 	/**
-	 * URL on the client side that will be used to communicate
-	 * completion of the user flow. The URL can include query
-	 * parameters. 
+	*  URL on the client side that will be used to communicate
+	*  completion of the user flow. The URL can include query
+	*  parameters. 
 	 * @access public
 	 
 	 	 	 	 
@@ -290,13 +290,13 @@ class RequestPermissionsRequest
 
 
 /**
- * Returns the temporary request token 
+ *  Returns the temporary request token 
  */
 class RequestPermissionsResponse  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -305,10 +305,10 @@ class RequestPermissionsResponse
 	public $responseEnvelope;
 
 	/**
-	 * Temporary token that identifies the request for permissions.
-	 * This token cannot be used to access resources on the
-	 * account. It can only be used to instruct the user to
-	 * authorize the permissions. 
+	*  Temporary token that identifies the request for permissions.
+	*  This token cannot be used to access resources on the
+	*  account. It can only be used to instruct the user to
+	*  authorize the permissions. 
 	 * @access public
 	 
 	 	 	 	 
@@ -317,7 +317,7 @@ class RequestPermissionsResponse
 	public $token;
 
 	/**
-	 * 
+	*  
      * @array
 	 * @access public
 	 
@@ -332,15 +332,15 @@ class RequestPermissionsResponse
 
 
 /**
- * The request use to retrieve a permanent access token. The
- * client can either send the token and verifier, or a subject.
- * 
+ *  The request use to retrieve a permanent access token. The
+ *  client can either send the token and verifier, or a subject.
+ *  
  */
 class GetAccessTokenRequest  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -349,8 +349,8 @@ class GetAccessTokenRequest
 	public $requestEnvelope;
 
 	/**
-	 * The temporary request token received from the
-	 * RequestPermissions call. 
+	*  The temporary request token received from the
+	*  RequestPermissions call. 
 	 * @access public
 	 
 	 	 	 	 
@@ -359,8 +359,8 @@ class GetAccessTokenRequest
 	public $token;
 
 	/**
-	 * The verifier code returned to the client after the user
-	 * authorization flow completed. 
+	*  The verifier code returned to the client after the user
+	*  authorization flow completed. 
 	 * @access public
 	 
 	 	 	 	 
@@ -369,9 +369,9 @@ class GetAccessTokenRequest
 	public $verifier;
 
 	/**
-	 * The subject email address used to represent existing 3rd
-	 * Party Permissions relationship. This field can be used in
-	 * lieu of the token and verifier. 
+	*  The subject email address used to represent existing 3rd
+	*  Party Permissions relationship. This field can be used in
+	*  lieu of the token and verifier. 
 	 * @access public
 	 
 	 	 	 	 
@@ -385,15 +385,15 @@ class GetAccessTokenRequest
 
 
 /**
- * Permanent access token and token secret that can be used to
- * make requests for protected resources owned by another
- * account. 
+ *  Permanent access token and token secret that can be used to
+ *  make requests for protected resources owned by another
+ *  account. 
  */
 class GetAccessTokenResponse  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -402,8 +402,8 @@ class GetAccessTokenResponse
 	public $responseEnvelope;
 
 	/**
-	 * Identifier for the permissions approved for this
-	 * relationship. 
+	*  Identifier for the permissions approved for this
+	*  relationship. 
      * @array
 	 * @access public
 	 
@@ -413,8 +413,8 @@ class GetAccessTokenResponse
 	public $scope;
 
 	/**
-	 * Permanent access token that identifies the relationship that
-	 * the user authorized. 
+	*  Permanent access token that identifies the relationship that
+	*  the user authorized. 
 	 * @access public
 	 
 	 	 	 	 
@@ -423,8 +423,8 @@ class GetAccessTokenResponse
 	public $token;
 
 	/**
-	 * The token secret/password that will need to be used when
-	 * generating the signature. 
+	*  The token secret/password that will need to be used when
+	*  generating the signature. 
 	 * @access public
 	 
 	 	 	 	 
@@ -433,7 +433,7 @@ class GetAccessTokenResponse
 	public $tokenSecret;
 
 	/**
-	 * 
+	*  
      * @array
 	 * @access public
 	 
@@ -448,14 +448,14 @@ class GetAccessTokenResponse
 
 
 /**
- * Request to retrieve the approved list of permissions
- * associated with a token. 
+ *  Request to retrieve the approved list of permissions
+ *  associated with a token. 
  */
 class GetPermissionsRequest  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -464,7 +464,7 @@ class GetPermissionsRequest
 	public $requestEnvelope;
 
 	/**
-	 * The permanent access token to ask about. 
+	*  The permanent access token to ask about. 
 	 * @access public
 	 
 	 	 	 	 
@@ -485,13 +485,13 @@ class GetPermissionsRequest
 
 
 /**
- * The list of permissions associated with the token. 
+ *  The list of permissions associated with the token. 
  */
 class GetPermissionsResponse  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -500,8 +500,8 @@ class GetPermissionsResponse
 	public $responseEnvelope;
 
 	/**
-	 * Identifier for the permissions approved for this
-	 * relationship. 
+	*  Identifier for the permissions approved for this
+	*  relationship. 
      * @array
 	 * @access public
 	 
@@ -511,7 +511,7 @@ class GetPermissionsResponse
 	public $scope;
 
 	/**
-	 * 
+	*  
      * @array
 	 * @access public
 	 
@@ -526,14 +526,14 @@ class GetPermissionsResponse
 
 
 /**
- * Request to invalidate an access token and revoke the
- * permissions associated with it. 
+ *  Request to invalidate an access token and revoke the
+ *  permissions associated with it. 
  */
 class CancelPermissionsRequest  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -542,7 +542,7 @@ class CancelPermissionsRequest
 	public $requestEnvelope;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -563,13 +563,13 @@ class CancelPermissionsRequest
 
 
 /**
- * 
+ *  
  */
 class CancelPermissionsResponse  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -578,7 +578,7 @@ class CancelPermissionsResponse
 	public $responseEnvelope;
 
 	/**
-	 * 
+	*  
      * @array
 	 * @access public
 	 
@@ -593,13 +593,13 @@ class CancelPermissionsResponse
 
 
 /**
- * List of Personal Attributes to be sent as a request. 
+ *  List of Personal Attributes to be sent as a request. 
  */
 class PersonalAttributeList  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
      * @array
 	 * @access public
 	 
@@ -614,15 +614,15 @@ class PersonalAttributeList
 
 
 /**
- * A property of User Identity data , represented as a
- * Name-value pair with Name being the PersonalAttribute
- * requested and value being the data. 
+ *  A property of User Identity data , represented as a
+ *  Name-value pair with Name being the PersonalAttribute
+ *  requested and value being the data. 
  */
 class PersonalData  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -631,7 +631,7 @@ class PersonalData
 	public $personalDataKey;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -645,14 +645,14 @@ class PersonalData
 
 
 /**
- * Set of personal data which forms the response of
- * GetPersonalData call. 
+ *  Set of personal data which forms the response of
+ *  GetPersonalData call. 
  */
 class PersonalDataList  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
      * @array
 	 * @access public
 	 
@@ -667,16 +667,16 @@ class PersonalDataList
 
 
 /**
- * Request to retrieve basic personal data.Accepts
- * PersonalAttributeList as request and responds with
- * PersonalDataList. This call will accept only 'Basic'
- * attributes and ignore others. 
+ *  Request to retrieve basic personal data.Accepts
+ *  PersonalAttributeList as request and responds with
+ *  PersonalDataList. This call will accept only 'Basic'
+ *  attributes and ignore others. 
  */
 class GetBasicPersonalDataRequest  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -685,7 +685,7 @@ class GetBasicPersonalDataRequest
 	public $requestEnvelope;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -706,16 +706,16 @@ class GetBasicPersonalDataRequest
 
 
 /**
- * Request to retrieve personal data.Accepts
- * PersonalAttributeList as request and responds with
- * PersonalDataList. This call will accept both 'Basic' and
- * Advanced attributes. 
+ *  Request to retrieve personal data.Accepts
+ *  PersonalAttributeList as request and responds with
+ *  PersonalDataList. This call will accept both 'Basic' and
+ *  Advanced attributes. 
  */
 class GetAdvancedPersonalDataRequest  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -724,7 +724,7 @@ class GetAdvancedPersonalDataRequest
 	public $requestEnvelope;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -745,13 +745,13 @@ class GetAdvancedPersonalDataRequest
 
 
 /**
- * 
+ *  
  */
 class GetBasicPersonalDataResponse  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -760,7 +760,7 @@ class GetBasicPersonalDataResponse
 	public $responseEnvelope;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -769,7 +769,7 @@ class GetBasicPersonalDataResponse
 	public $response;
 
 	/**
-	 * 
+	*  
      * @array
 	 * @access public
 	 
@@ -784,13 +784,13 @@ class GetBasicPersonalDataResponse
 
 
 /**
- * 
+ *  
  */
 class GetAdvancedPersonalDataResponse  
   extends PPMessage   {
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -799,7 +799,7 @@ class GetAdvancedPersonalDataResponse
 	public $responseEnvelope;
 
 	/**
-	 * 
+	*  
 	 * @access public
 	 
 	 	 	 	 
@@ -808,7 +808,7 @@ class GetAdvancedPersonalDataResponse
 	public $response;
 
 	/**
-	 * 
+	*  
      * @array
 	 * @access public
 	 
