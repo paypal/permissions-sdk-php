@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * AUTO GENERATED code for Permissions
+ *  AUTO GENERATED code for Permissions
  */
 class PermissionsService extends PPBaseService {
 
@@ -12,10 +12,10 @@ class PermissionsService extends PPBaseService {
 	private static $SERVICE_NAME = "Permissions";
 
     // SDK Name
-	protected static $SDK_NAME = "permissions-php-sdk";
+	protected static $SDK_NAME = "sdkname";
 	
 	// SDK Version
-	protected static $SDK_VERSION = "2.2.98";
+	protected static $SDK_VERSION = "sdkversion";
 
 	public function __construct($config = null) {
 		parent::__construct(self::$SERVICE_NAME, 'NV', array('PPPlatformServiceHandler'), $config);
