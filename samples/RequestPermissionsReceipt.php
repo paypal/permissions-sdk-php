@@ -21,7 +21,7 @@ if(isset($_POST['chkScope'])) {
 $requestEnvelope = new RequestEnvelope("en_US");
 $request = new RequestPermissionsRequest($scope, $returnURL);
 $request->requestEnvelope = $requestEnvelope;
-$service = new PermissionsService('Permissions');
+$service = new PermissionsService();
 try {
 	$response = $service->RequestPermissions($request);
 } catch(Exception $ex) {
