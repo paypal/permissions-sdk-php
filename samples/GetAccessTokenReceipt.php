@@ -12,7 +12,7 @@ $request = new GetAccessTokenRequest();
 $request->requestEnvelope = $requestEnvelope;
 $request->token = $_REQUEST['Requesttoken'];
 $request->verifier = $_REQUEST['Verifier'];
-$service = new PermissionsService('Permissions');
+$service = new PermissionsService();
 try {
 	$response = $service->GetAccessToken($request);
 } catch (Exception $ex) {
