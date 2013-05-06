@@ -1,46 +1,40 @@
 
-PayPal PHP Permissions SDK
-==========================
+# PayPal PHP Permissions SDK
 
-Prerequisites
--------------
+
+## Prerequisites
 
 PayPal's PHP Permissions SDK requires 
 
-   * PHP 5.2 and above with curl/openssl extensions enabled
- 
-Installing the SDK
--------------------
-   if not using composer 
+   * PHP 5.2 and above 
+   * curl/openssl PHP extensions 
+
+
+## Running the sample
+
+To run the bundled sample, copy the samples folder to your web server root. You will then need to install the SDK as a dependency using either composer or by running a custom installation script provided with the SDK.
+
+
+If using composer, run `composer update` from the samples folder. Otherwise, run install.php from permissions-sdk-php/samples directory
    
-   run installation script from permissions-sdk-php/samples directory
-   
-    curl  https://raw.github.com/paypal/permissions-sdk-php/composer/samples/install.php | php
+    curl  https://raw.github.com/paypal/permissions-sdk-php/stable/samples/install.php | php
     
         or 
         
     php install.php
-    
-   if using composer
-   
-   Run from permissions-sdk-php/samples directory and after the installation set the path to config file in PPBootStrap.php, config file is in vendor/paypal/permissions-sdk-php/config/
-   
-    composer update
-    
 
-Using the SDK
--------------
+## Using the SDK
 
-To use the SDK, 
 
-   * Update the sdk_config.ini with your API credentials.
-   * Require "PPBootStrap.php" in your application. [copy it from vendor/paypal/permissions-sdk-php/sample/ if using composer]
-   * To run samples : copy samples in [vendor/paypal/permissions-sdk-php/] to root directory and run in browser
-   * To build your own application:
-   * Create a service wrapper object.
-   * Create a request object as per your project's needs. All the API request and response classes 
-     are available in services\Permissions\PermissionsService.php
-   * Invoke the appropriate method on the service object.
+To use the SDK,
+
+   * Create a composer.json file and install the SDK as a dependency using composer or the install.php script. You can use the composer.json in the samples folder as a starting point.
+   * Require `vendor/autoload.php` OR `PPBootStrap.php` in your application depending on whether you used composer or the custom installer.
+   * Choose how you would like to configure the SDK - You can either
+      * Create a `sdk_config.ini` file and set the PP_CONFIG_PATH constant to point to the directory where this file exists OR
+	  * Create a hashmap containing configuration parameters and pass it to the service object.
+   * Instantiate a service wrapper object and a request object as per your project's needs.
+   * Invoke the appropriate method on the service object passing in the request object.
 
 For example,
 
@@ -54,11 +48,11 @@ For example,
 	$permissions = new PermissionsService();
 	$response = $permissions->RequestPermissions($request);
 	
-	$ack = strtoupper($response->responseEnvelope->ack); 
-	if($ack == 'SUCCESS') {
+	if($strtoupper($response->responseEnvelope->ack) == 'SUCCESS') {
 		// Success
 	}
   
+## Authentication
 
 The SDK provides multiple ways to authenticate your API call.
 
@@ -76,35 +70,21 @@ The SDK provides multiple ways to authenticate your API call.
 	$response = $permissions->RequestPermissions($request, $cred);	
   
   
-SDK Configuration
------------------
+## SDK Configuration
 
-Replace the API credential in config/sdk_config.ini . You can use the configuration file to configure
 
+The SDK allows you to configure the following using the sdk_config.ini file
+
+   * Integration mode (sandbox / live)
    * (Multiple) API account credentials.
-   * Service endpoint and other HTTP connection parameters
+   * HTTP connection parameters
    * Logging 
-   dynamic configuration values can be set by passing a map of credential and config values (if config map is passed the config file is ignored)
-   ex : 
-    $service  = new PermissionsService($configMap); // where $configMap is a config array
+
+Alternatively, dynamic configuration values can be set by passing a map of credential and config values (if config map is passed the config file is ignored)
+   eg:  $service  = new PermissionsService($configMap); // where $configMap is a config array
 
 Please refer to the sample config file provided with this bundle.
 
-Using multiple SDKs together
-----------------------------
-*add the required sdk names to 'required' section of composer.json
-*add the service endpoint to 'config/sdk_config.ini', for the endpoints refer the list below
+## Getting help
 
-Endpoint Configuration
----------------------------
-*set 'mode' to 'SANDBOX' for testing and 'LIVE' for production
-
-For additional information please refer to https://www.x.com/developers/paypal/documentation-tools/api
-
-
-Getting help
-------------
-
-If you need help using the SDK, a new feature that you need or have a issue to report, please visit
-   
-   https://github.com/paypal/permissions-sdk-php/issues 
+If you need help using the SDK, a new feature that you need or have a issue to report, please visit https://github.com/paypal/permissions-sdk-php/issues 
