@@ -1,7 +1,17 @@
 <?php 
+namespace PayPal\Service;
+use PayPal\Core\PPMessage;
+use PayPal\Core\PPBaseService;
+use PayPal\Core\PPUtils;
+use PayPal\Types\Perm\RequestPermissionsResponse;
+use PayPal\Types\Perm\GetAccessTokenResponse;
+use PayPal\Types\Perm\GetPermissionsResponse;
+use PayPal\Types\Perm\CancelPermissionsResponse;
+use PayPal\Types\Perm\GetBasicPersonalDataResponse;
+use PayPal\Types\Perm\GetAdvancedPersonalDataResponse;
 
 /**
- *  AUTO GENERATED code for Permissions
+ * AUTO GENERATED code for Permissions
  */
 class PermissionsService extends PPBaseService {
 
@@ -12,13 +22,13 @@ class PermissionsService extends PPBaseService {
 	private static $SERVICE_NAME = "Permissions";
 
     // SDK Name
-	protected static $SDK_NAME = "permissions-php-sdk";
+	protected static $SDK_NAME = "sdkname";
 	
 	// SDK Version
-	protected static $SDK_VERSION = "2.3.100";
+	protected static $SDK_VERSION = "sdkversion";
 
 	public function __construct($config = null) {
-		parent::__construct(self::$SERVICE_NAME, 'NV', array('PPPlatformServiceHandler'), $config);
+		parent::__construct(self::$SERVICE_NAME, 'NV', array('PayPal\Handler\PPPlatformServiceHandler'), $config);
         parent::$SDK_NAME    = self::$SDK_NAME ;
         parent::$SDK_VERSION = self::$SDK_VERSION;
 	}
