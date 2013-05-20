@@ -6,7 +6,7 @@
 
 PayPal's PHP Permissions SDK requires 
 
-   * PHP 5.2 and above 
+   * PHP 5.3 and above 
    * curl/openssl PHP extensions 
 
 
