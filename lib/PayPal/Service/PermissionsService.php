@@ -27,6 +27,10 @@ class PermissionsService extends PPBaseService {
 	// SDK Version
 	protected static $SDK_VERSION = "sdkversion";
 
+    /**
+    * @param $config - Dynamic config map. This takes the higher precedence if config file is also present.
+    *
+    */
 	public function __construct($config = null) {
 		parent::__construct(self::$SERVICE_NAME, 'NV', array('PayPal\Handler\PPPlatformServiceHandler'), $config);
         parent::$SDK_NAME    = self::$SDK_NAME ;
@@ -40,7 +44,7 @@ class PermissionsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return RequestPermissionsResponse
+	 * @return Types\Perm\RequestPermissionsResponse
 	 * @throws APIException
 	 */
 	public function RequestPermissions($requestPermissionsRequest, $apiCredential = NULL) {
@@ -57,7 +61,7 @@ class PermissionsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return GetAccessTokenResponse
+	 * @return Types\Perm\GetAccessTokenResponse
 	 * @throws APIException
 	 */
 	public function GetAccessToken($getAccessTokenRequest, $apiCredential = NULL) {
@@ -74,7 +78,7 @@ class PermissionsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return GetPermissionsResponse
+	 * @return Types\Perm\GetPermissionsResponse
 	 * @throws APIException
 	 */
 	public function GetPermissions($getPermissionsRequest, $apiCredential = NULL) {
@@ -91,7 +95,7 @@ class PermissionsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return CancelPermissionsResponse
+	 * @return Types\Perm\CancelPermissionsResponse
 	 * @throws APIException
 	 */
 	public function CancelPermissions($cancelPermissionsRequest, $apiCredential = NULL) {
@@ -108,7 +112,7 @@ class PermissionsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return GetBasicPersonalDataResponse
+	 * @return Types\Perm\GetBasicPersonalDataResponse
 	 * @throws APIException
 	 */
 	public function GetBasicPersonalData($getBasicPersonalDataRequest, $apiCredential = NULL) {
@@ -125,7 +129,7 @@ class PermissionsService extends PPBaseService {
 	 * @param mixed $apiCredential - Optional API credential - can either be
 	 * 		a username configured in sdk_config.ini or a ICredential object
 	 *      created dynamically 		
-	 * @return GetAdvancedPersonalDataResponse
+	 * @return Types\Perm\GetAdvancedPersonalDataResponse
 	 * @throws APIException
 	 */
 	public function GetAdvancedPersonalData($getAdvancedPersonalDataRequest, $apiCredential = NULL) {
