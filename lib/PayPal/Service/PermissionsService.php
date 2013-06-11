@@ -22,10 +22,10 @@ class PermissionsService extends PPBaseService {
 	private static $SERVICE_NAME = "Permissions";
 
     // SDK Name
-	protected static $SDK_NAME = "sdkname";
+	protected static $SDK_NAME = "permissions-php-sdk";
 	
 	// SDK Version
-	protected static $SDK_VERSION = "sdkversion";
+	protected static $SDK_VERSION = "3.5.103";
 
     /**
     * @param $config - Dynamic config map. This takes the higher precedence if config file is also present.
