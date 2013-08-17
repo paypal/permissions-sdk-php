@@ -11,7 +11,7 @@
 <title>PayPal Permissions - Get Access Token</title>
 </head>
 <body>
-		<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png">
+		<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png"/>
 <center>
 
 	<form action="GetAccessTokenReceipt.php" method="post">
