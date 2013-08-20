@@ -5,6 +5,7 @@
 <title>PayPal Permissions SDK - Samples Main Page</title>
 </head>
 <body>
+		<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png">
 	<center>
 		<h4>Permissions SDK Samples Home Page</h4>
 		<table>
