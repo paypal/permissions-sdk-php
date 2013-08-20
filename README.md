@@ -113,13 +113,13 @@ Dynamic configuration values can be set by passing a map of credential and confi
     );
 	$service  = new PermissionsService($config);
 ```
-Alternatively, credential and configuration can be loaded from a file. refer <https://github.com/paypal/permissions-sdk-php/wiki> for example
+Alternatively, credential and configuration can be loaded from a file. 
 ```php
     define('PP_CONFIG_PATH', '/directory/that/contains/sdk_config.ini');
     $service  = new PermissionsService();
 ```
 
-Please refer to the sample config file provided with this bundle.
+You can refer full list of configuration parameters in [wiki](https://github.com/paypal/sdk-core-php/wiki/Configuring-the-SDK) page.
 
 ## Links
 
