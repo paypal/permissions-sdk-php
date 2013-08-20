@@ -71,9 +71,9 @@ $request->requestEnvelope = $requestEnvelope;
 /*
  * 	 ## Creating service wrapper object
 Creating service wrapper object to make API call and loading
-configuration file for your credentials and endpoint
+Configuration::getAcctAndConfig() returns array that contains credential and config parameters
 */
-$service = new PermissionsService();
+$service = new PermissionsService(Configuration::getAcctAndConfig());
 try {
 	/*
 	 *  ## Making API call
@@ -93,6 +93,7 @@ If the response was an error, display the errors received using APIError.php.
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <body>
+		<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png"/>
 	<div id="request_form">
 		<h3>RequestPermissions - Response</h3>
 		<?php
