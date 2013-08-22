@@ -1,5 +1,12 @@
 ### CHANGELOG
 
+#### Version 2.5.106 - August 22, 2013
+ 
+	- Updated samples to showcase dynamic configuration.
+	
+You can see source code of this release in github under https://github.com/paypal/permissions-sdk-php/tree/v2.5.106.
+--------------------------------------------------------------------------------------------------
+
 #### Version 2.4.103 - June 11, 2013
  
 	- Removed deprecated methods like setAccessToken, getAccessToken from baseService in core.
