@@ -27,7 +27,7 @@ To use the SDK,
 {
     "name": "me/shopping-cart-app",
     "require": {
-        "paypal/permissions-sdk-php":"v3.4.103"
+        "paypal/permissions-sdk-php":"v3.6.106"
     }
 }
 ```
