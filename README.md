@@ -1,4 +1,3 @@
-
 # PayPal PHP Permissions SDK
 
 
@@ -35,7 +34,7 @@ To use the SDK,
 {
     "name": "me/shopping-cart-app",
     "require": {
-        "paypal/permissions-sdk-php":"v2.4.103"
+        "paypal/permissions-sdk-php":"v2.5.106"
     }
 }
 ```
