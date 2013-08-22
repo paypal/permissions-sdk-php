@@ -29,9 +29,9 @@ $request->verifier = $_REQUEST['Verifier'];
 /*
  *  ## Creating service wrapper object
 Creating service wrapper object to make API call and loading
-configuration file for your credentials and endpoint
+Configuration::getAcctAndConfig() returns array that contains credential and config parameters
 */
-$service = new PermissionsService();
+$service = new PermissionsService(Configuration::getAcctAndConfig());
 try {
 
 	/*
@@ -56,6 +56,7 @@ $ack = strtoupper($response->responseEnvelope->ack);
 </head>
 
 <body>
+		<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png"/>
 
 	<div id="request_form">
 		<center>
