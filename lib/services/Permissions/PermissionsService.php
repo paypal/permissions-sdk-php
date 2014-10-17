@@ -15,12 +15,10 @@ class PermissionsService extends PPBaseService {
 	protected static $SDK_NAME = "permissions-php-sdk";
 	
 	// SDK Version
-	protected static $SDK_VERSION = "2.5.106";
+	protected static $SDK_VERSION = "2.6.106";
 
 	public function __construct($config = null) {
-		parent::__construct(self::$SERVICE_NAME, 'NV', array('PPPlatformServiceHandler'), $config);
-        parent::$SDK_NAME    = self::$SDK_NAME ;
-        parent::$SDK_VERSION = self::$SDK_VERSION;
+		parent::__construct(self::$SERVICE_NAME, 'NV', $config);
 	}
 
 
@@ -35,7 +33,11 @@ class PermissionsService extends PPBaseService {
 	 */
 	public function RequestPermissions($requestPermissionsRequest, $apiCredential = NULL) {
 		$ret = new RequestPermissionsResponse();
-		$resp = $this->call('Permissions', 'RequestPermissions', $requestPermissionsRequest, $apiCredential);
+        $apiContext = new PPApiContext($this->config);
+        $handlers = array(
+            new PPPlatformServiceHandler($apiCredential, self::$SDK_NAME, self::$SDK_VERSION),
+        );
+		$resp = $this->call('Permissions', 'RequestPermissions', $requestPermissionsRequest, $apiContext, $handlers);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -52,7 +54,11 @@ class PermissionsService extends PPBaseService {
 	 */
 	public function GetAccessToken($getAccessTokenRequest, $apiCredential = NULL) {
 		$ret = new GetAccessTokenResponse();
-		$resp = $this->call('Permissions', 'GetAccessToken', $getAccessTokenRequest, $apiCredential);
+		$apiContext = new PPApiContext($this->config);
+        $handlers = array(
+            new PPPlatformServiceHandler($apiCredential, self::$SDK_NAME, self::$SDK_VERSION),
+        );
+		$resp = $this->call('Permissions', 'GetAccessToken', $getAccessTokenRequest, $apiContext, $handlers);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -69,7 +75,11 @@ class PermissionsService extends PPBaseService {
 	 */
 	public function GetPermissions($getPermissionsRequest, $apiCredential = NULL) {
 		$ret = new GetPermissionsResponse();
-		$resp = $this->call('Permissions', 'GetPermissions', $getPermissionsRequest, $apiCredential);
+		$apiContext = new PPApiContext($this->config);
+        $handlers = array(
+            new PPPlatformServiceHandler($apiCredential, self::$SDK_NAME, self::$SDK_VERSION),
+        );
+		$resp = $this->call('Permissions', 'GetPermissions', $getPermissionsRequest, $apiContext, $handlers);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -86,7 +96,11 @@ class PermissionsService extends PPBaseService {
 	 */
 	public function CancelPermissions($cancelPermissionsRequest, $apiCredential = NULL) {
 		$ret = new CancelPermissionsResponse();
-		$resp = $this->call('Permissions', 'CancelPermissions', $cancelPermissionsRequest, $apiCredential);
+		$apiContext = new PPApiContext($this->config);
+        $handlers = array(
+            new PPPlatformServiceHandler($apiCredential, self::$SDK_NAME, self::$SDK_VERSION),
+        );
+		$resp = $this->call('Permissions', 'CancelPermissions', $cancelPermissionsRequest, $apiContext, $handlers);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -103,7 +117,11 @@ class PermissionsService extends PPBaseService {
 	 */
 	public function GetBasicPersonalData($getBasicPersonalDataRequest, $apiCredential = NULL) {
 		$ret = new GetBasicPersonalDataResponse();
-		$resp = $this->call('Permissions', 'GetBasicPersonalData', $getBasicPersonalDataRequest, $apiCredential);
+		$apiContext = new PPApiContext($this->config);
+        $handlers = array(
+            new PPPlatformServiceHandler($apiCredential, self::$SDK_NAME, self::$SDK_VERSION),
+        );
+		$resp = $this->call('Permissions', 'GetBasicPersonalData', $getBasicPersonalDataRequest, $apiContext, $handlers);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
@@ -120,7 +138,11 @@ class PermissionsService extends PPBaseService {
 	 */
 	public function GetAdvancedPersonalData($getAdvancedPersonalDataRequest, $apiCredential = NULL) {
 		$ret = new GetAdvancedPersonalDataResponse();
-		$resp = $this->call('Permissions', 'GetAdvancedPersonalData', $getAdvancedPersonalDataRequest, $apiCredential);
+		$apiContext = new PPApiContext($this->config);
+        $handlers = array(
+            new PPPlatformServiceHandler($apiCredential, self::$SDK_NAME, self::$SDK_VERSION),
+        );
+		$resp = $this->call('Permissions', 'GetAdvancedPersonalData', $getAdvancedPersonalDataRequest, $apiContext, $handlers);
 		$ret->init(PPUtils::nvpToMap($resp));
 		return $ret;
 	}
