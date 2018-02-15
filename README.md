@@ -39,6 +39,9 @@ wget  https://raw.githubusercontent.com/paypal/permissions-sdk-php/stable-php5.3
 php install.php
 ```
 
+## Support
+
+> Please contact [PayPal Technical Support](https://developer.paypal.com/support/) for any live or account issues.
 
 ## Prerequisites
 
