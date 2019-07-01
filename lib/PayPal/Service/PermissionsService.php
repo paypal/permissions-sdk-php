@@ -138,7 +138,7 @@ class PermissionsService extends PPBaseService {
 		);
 		$ret = new GetBasicPersonalDataResponse();
 		$resp = $this->call('Permissions', 'GetBasicPersonalData', $getBasicPersonalDataRequest, $apiContext, $handlers);
-		$ret->init(PPUtils::nvpToMap($resp));
+		$ret->init(PPUtils::nvpToMapWithoutUrlDecode($resp));
 		return $ret;
 	}
 
