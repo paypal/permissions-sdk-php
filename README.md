@@ -1,3 +1,5 @@
+# Deprecation Notice:
+This SDK is deprecated; you can continue to use it, but no new features or support requests will be accepted. An integration with [the new Server SDK](https://github.com/paypal/PayPal-Server-SDKs) is recommended. Review the [docs](https://developer.paypal.com/serversdk/http/getting-started/how-to-get-started/) for details.
 
 # PayPal PHP Permissions SDK
 
